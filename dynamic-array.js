@@ -17,18 +17,24 @@ class DynamicArray {
 
 
   pop() {
-
-    // Your code here
+    let val = this.data[this.length - 1];
+    this.data[this.length -1] = undefined;
+    this.length--;
+    return val;
   }
 
   shift() {
 
-    // Your code here
+
   }
 
   unshift(val) {
+    this.length++;
+    for(let i = this.length; i > 0; i--) {
+      this.data[i] = this.data[i - 1];
+    }
+    this.data[0] = val;
 
-    // Your code here
   }
 
   indexOf(val) {
