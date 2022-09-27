@@ -1,18 +1,18 @@
 class DynamicArray {
 
-  constructor(defaultSize=4) {
-
-    // Your code here
+  constructor(capacity = 4) {
+    this.capacity = capacity;
+    this.length = 0;
+    this.data = new Array(this.capacity);
   }
 
   read(index) {
-
-    // Your code here
+    return this.data[index]
   }
 
   push(val) {
-
-    // Your code here
+    this.data[this.length] = val;
+    this.length++;
   }
 
 
@@ -31,12 +31,12 @@ class DynamicArray {
     // Your code here
   }
 
-  indexOf (val) {
+  indexOf(val) {
 
     // Your code here
   }
 
-  resize () {
+  resize() {
 
     // Your code here
   }
